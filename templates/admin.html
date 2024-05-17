@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+</head>
+<body>
+<br>
+    <div id="login" >
+        <div style="background-color: antiquewhite;" class="container">
+        <h3 class="text-center " style="color: rgb(190, 85, 15); padding: 5px;">Admin Panel</h3>
+
+        </div>
+        <center>
+        <a href="{{ url_for('logout_route') }}" class=" text-center" style="color: red;">Logout</a>
+       
+        </center>
+        <div class="container" >
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <!-- <h3 class="text-center text-info">Login</h3> -->
+                            <div class="form-group">
+                                <label for="question" class="text-info">New Question:</label><br>
+                                <input  type="text" id="question" name="question" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Answer:</label><br>
+                                <input type="text" id="answer" name="answer" required class="form-control">
+                            </div>
+                            <div class="form-group">
+                                
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            <div id="register-link" class="text-right">
+                              
+                            </div>
+                        </form>
+                        {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

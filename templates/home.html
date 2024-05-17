@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Home</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+</head>
+<body>
+    <div style="margin-top: 100px;">
+    <center style="bottom: 50%;">
+        <h1 style="color: white;">Welcome from Brucey Chatbot</h1>
+        <p style="color: rgb(241, 76, 76);">This deployment is only target for testing right now!</p>
+        <a href="{{ url_for('login_route') }}">
+        <button class="btn btn-secondary">
+      Admin Panel
+
+        </button></a>
+        <br><br>
+        <a href="{{ url_for('chat_route') }}">
+        <button class="btn btn-primary">
+       Brucey Bot
+            
+        </button></a>
+    </center>
+</div>
+</body>
+</html>
